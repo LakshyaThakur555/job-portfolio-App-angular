@@ -1,0 +1,67 @@
+<div class="dashboard-container">
+  <div class="dashboard-header">
+    <h2>Greetings!</h2>
+    <mat-form-field class="search-bar">
+      <input matInput placeholder="Search..." />
+      <button mat-icon-button matSuffix>
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+
+  <div class="cards-container">
+    <mat-card class="stat-card">
+      <mat-card-header>
+        <div mat-card-avatar class="icon-box borrowed"></div>
+        <mat-card-title>Borrowed</mat-card-title>
+        
+        <mat-card-subtitle>{{ 198004 | currency:'INR' }}</mat-card-subtitle>
+      </mat-card-header>
+      
+      <mat-card-content>{{ 0.48 | percent }} target reached</mat-card-content>
+    </mat-card>
+
+    <mat-card class="stat-card">
+      <mat-card-header>
+        <div mat-card-avatar class="icon-box profit"></div>
+        <mat-card-title>Annual Profit</mat-card-title>
+        
+        <mat-card-subtitle>{{ 195810604 | currency:'INR' }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>{{ 0.55 | percent }} target reached</mat-card-content>
+    </mat-card>
+
+    <mat-card class="stat-card">
+      <mat-card-header>
+        <div mat-card-avatar class="icon-box conversion"></div>
+        <mat-card-title>Lead Conversion</mat-card-title>
+       
+        <mat-card-subtitle>{{ 198104 | currency:'INR' }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>{{ 0.87 | percent }} target reached</mat-card-content>
+    </mat-card>
+
+    <mat-card class="stat-card">
+      <mat-card-header>
+        <div mat-card-avatar class="icon-box income"></div>
+        <mat-card-title>Average Income</mat-card-title>
+        
+        <mat-card-subtitle>{{ 9091200 | currency:'INR' }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>{{ 0.48 | percent }} target reached</mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Charts Section -->
+  <div class="charts-container">
+    <div class="chart-box">
+      <h3>Revenue by Location</h3>
+      <canvas id="revenueChart"></canvas>
+    </div>
+
+    <div class="chart-box">
+      <h3>Order Statistics</h3>
+      <canvas id="orderStatsChart"></canvas>
+    </div>
+  </div>
+</div>

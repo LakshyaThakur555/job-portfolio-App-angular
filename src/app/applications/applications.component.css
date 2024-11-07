@@ -1,0 +1,28 @@
+.applications-page {
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+
+.application-card {
+    margin-bottom: 15px;
+}
+
+.company-logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.status-under-review {
+    color: orange;
+}
+
+.status-interview {
+    color: green;
+}
+
+.status-rejected {
+    color: red;
+}

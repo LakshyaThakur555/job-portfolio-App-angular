@@ -1,0 +1,170 @@
+/* Settings Section */
+.settings-section {
+    padding: 40px;
+    background-color: #f4f7fa;
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+.settings-header h2 {
+    font-size: 28px;
+    color: #453b59;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.settings-header p {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.settings-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Individual Settings Cards */
+.settings-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    flex: 1 1 calc(45% - 20px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.settings-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.settings-card h3 {
+    font-size: 20px;
+    color: #453b59;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f8e5d1;
+    padding-bottom: 10px;
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.setting-item label {
+    font-size: 16px;
+    color: #666;
+}
+
+.setting-item select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.setting-item select:focus {
+    border-color: #453b59;
+    outline: none;
+}
+
+/* Action and Danger Buttons */
+.action-button {
+    background-color: #453b59;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.action-button:hover {
+    background-color: #322a4a;
+}
+
+.danger-button {
+    background-color: #f67280;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.danger-button:hover {
+    background-color: #d9606d;
+}
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #453b59;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .settings-cards {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .settings-card {
+        flex: 1 1 100%;
+    }
+}

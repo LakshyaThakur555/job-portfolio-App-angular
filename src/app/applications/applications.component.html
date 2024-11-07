@@ -1,0 +1,31 @@
+<div class="applications-page">
+    <h1>Your Applications</h1>
+
+    <div *ngIf="applications.length > 0; else noApplications">
+        <mat-card *ngFor="let application of applications" class="application-card">
+            <mat-card-header>
+                <div mat-card-avatar class="company-logo">
+                    <img [src]="application.companyLogo" alt="Company Logo">
+                </div>
+                <mat-card-title>{{ application.jobTitle }}</mat-card-title>
+                <mat-card-subtitle>{{ application.companyName }}</mat-card-subtitle>
+            </mat-card-header>
+
+            <mat-card-content>
+                <p>Applied on: {{ application.appliedDate | date }}</p>
+                <p>Status: <span [ngClass]="getStatusClass(application.status)">
+                    {{ application.status }}
+                </span></p>
+            </mat-card-content>
+
+            <mat-card-actions>
+                <button mat-button color="primary" (click)="viewDetails(application.id)">View Details</button>
+                <button mat-button color="warn" (click)="withdrawApplication(application.id)">Withdraw</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+
+    <ng-template #noApplications>
+        <p>You haven't applied to any jobs yet.</p>
+    </ng-template>
+</div>

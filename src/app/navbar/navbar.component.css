@@ -1,0 +1,69 @@
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: #3f51b5; /* Primary background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow for more depth */
+    min-height: 64px; /* Standardized toolbar height */
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 0.5px; /* Slight letter spacing for readability */
+}
+
+.spacer {
+    flex: 1;
+}
+
+.nav-link {
+    color: #fff;
+    text-transform: uppercase;
+    margin-left: 20px; /* Increased margin for better spacing */
+    display: flex;
+    align-items: center;
+    font-size: 14px; /* Standard font size for nav links */
+    font-weight: 500;
+    letter-spacing: 0.75px; /* Improved readability */
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    padding: 8px 12px; /* Add padding for clickable area */
+    border-radius: 4px; /* Slightly round the link for a smoother appearance */
+}
+
+.nav-link mat-icon {
+    margin-right: 8px;
+    font-size: 22px; /* Slightly larger icon for better visual balance */
+}
+
+.nav-link:hover {
+    color: #ffcc00; /* Bright yellow on hover for better visibility */
+    background-color: rgba(255, 204, 0, 0.1); /* Subtle background change on hover */
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        margin-bottom: 10px;
+        width: 100%; /* Make the links full-width for better mobile interaction */
+        justify-content: flex-start; /* Align links to the left on smaller screens */
+    }
+
+    .spacer {
+        display: none; /* Hide the spacer in mobile views */
+    }
+
+    .title {
+        margin-bottom: 10px; /* Add some space below the title on smaller screens */
+    }
+}
